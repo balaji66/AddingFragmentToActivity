@@ -2,14 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorAccent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="40dp"
     tools:context=".MainActivity">
-    <FrameLayout android:layout_height="match_parent"
+    <fragment
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:name="com.durga.balaji66.addingfragmenttoactivity.BlankFragment"
         android:id="@+id/fragment">
-    </FrameLayout>
+    </fragment>
 
 
 </RelativeLayout>
