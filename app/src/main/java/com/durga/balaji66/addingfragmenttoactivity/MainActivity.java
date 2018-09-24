@@ -9,15 +9,17 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Fragment fragment = new BlankFragment();
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment,fragment).commit();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(R.anim.slide_in_up,R.anim.slide_in_down);
+        transaction.replace(R.id.fragment,fragment).commit();
+        //android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        //fragmentManager.beginTransaction().replace(R.id.fragment,fragment).commit();
 
     }
 }
